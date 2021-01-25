@@ -1,0 +1,19 @@
+//
+//  ViewController.swift
+//  Meteo-Hits
+//
+//  Created by Macbook on 25.01.2021.
+//
+
+import UIKit
+
+class MainViewController: UIViewController {
+
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    title = "Meteo-Hits"
+  }
+
+
+}
+
