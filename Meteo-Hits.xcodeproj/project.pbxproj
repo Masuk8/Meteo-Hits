@@ -41,6 +41,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA414F4E25C071D500DFEA16 /* Structures */ = {
+			isa = PBXGroup;
+			children = (
+				FA4E18D025BF221300471583 /* MeteoritesData.swift */,
+			);
+			path = Structures;
+			sourceTree = "<group>";
+		};
 		FA4E18AA25BF0C4700471583 = {
 			isa = PBXGroup;
 			children = (
@@ -60,12 +68,12 @@
 		FA4E18B525BF0C4700471583 /* Meteo-Hits */ = {
 			isa = PBXGroup;
 			children = (
+				FA414F4E25C071D500DFEA16 /* Structures */,
 				FA4E18B625BF0C4700471583 /* AppDelegate.swift */,
 				FA4E18B825BF0C4700471583 /* SceneDelegate.swift */,
 				FA4E18BA25BF0C4700471583 /* MainViewController.swift */,
 				FA4E18CB25BF18C200471583 /* MapViewController.swift */,
 				FA4E18BC25BF0C4700471583 /* Main.storyboard */,
-				FA4E18D025BF221300471583 /* MeteoritesData.swift */,
 				FA4E18BF25BF0C4B00471583 /* Assets.xcassets */,
 				FA4E18C125BF0C4B00471583 /* LaunchScreen.storyboard */,
 				FA4E18C425BF0C4B00471583 /* Info.plist */,

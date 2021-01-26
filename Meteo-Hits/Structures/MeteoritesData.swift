@@ -8,15 +8,15 @@
 import Foundation
 
 struct Meteorite: Codable {
-  
-  let name: String?
+  let name: String
   let mass: String?
   let year: String?
   let geolocation: Geolocation?
 }
 
 struct Geolocation: Codable {
-  
-  let latitude: String?
-  let longitude: String?
+  let type: String
+  let coordinates: [Double]
 }
+
+
