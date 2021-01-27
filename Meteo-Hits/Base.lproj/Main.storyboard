@@ -31,19 +31,56 @@ For more information, tap any meteorite.</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oMZ-mY-uas">
-                                <rect key="frame" x="20" y="313.5" width="45.5" height="20.5"/>
+                                <rect key="frame" x="35" y="313.5" width="45" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Mass" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0nv-s7-bJr">
-                                <rect key="frame" x="353.5" y="313.5" width="40.5" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Mass(in grams)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0nv-s7-bJr">
+                                <rect key="frame" x="261" y="313.5" width="118" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1tc-jB-hzh">
                                 <rect key="frame" x="20" y="359" width="374" height="503"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MeteoCell" id="KlT-FC-0Ea" customClass="MeteoTableViewCell" customModule="Meteo_Hits" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="374" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KlT-FC-0Ea" id="I1X-Ug-Gup">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nwc-sW-fn6">
+                                                    <rect key="frame" x="15" y="11.5" width="42.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mass" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cTI-se-MIT">
+                                                    <rect key="frame" x="249" y="11.5" width="110" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="110" id="5TB-fx-zq9"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="nwc-sW-fn6" firstAttribute="centerY" secondItem="I1X-Ug-Gup" secondAttribute="centerY" id="7Hc-kb-QjQ"/>
+                                                <constraint firstItem="nwc-sW-fn6" firstAttribute="leading" secondItem="I1X-Ug-Gup" secondAttribute="leading" constant="15" id="WGV-ry-7a4"/>
+                                                <constraint firstAttribute="trailing" secondItem="cTI-se-MIT" secondAttribute="trailing" constant="15" id="laY-nl-k9k"/>
+                                                <constraint firstItem="cTI-se-MIT" firstAttribute="centerY" secondItem="I1X-Ug-Gup" secondAttribute="centerY" id="vrg-ZB-qC6"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="tableViewCellMass" destination="cTI-se-MIT" id="urx-oU-tsq"/>
+                                            <outlet property="tableViewCellName" destination="nwc-sW-fn6" id="V2N-Dy-Q9c"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -54,10 +91,10 @@ For more information, tap any meteorite.</string>
                             <constraint firstItem="1tc-jB-hzh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="70s-R7-Cib"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Yyy-2Z-yuz" secondAttribute="trailing" constant="20" id="8aj-Qs-HCh"/>
                             <constraint firstItem="1tc-jB-hzh" firstAttribute="top" secondItem="0nv-s7-bJr" secondAttribute="bottom" constant="25" id="8xG-c5-7a2"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0nv-s7-bJr" secondAttribute="trailing" constant="20" id="Bjm-Vf-GvO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0nv-s7-bJr" secondAttribute="trailing" constant="35" id="Bjm-Vf-GvO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1tc-jB-hzh" secondAttribute="bottom" id="JA6-ze-Vx8"/>
                             <constraint firstItem="Yyy-2Z-yuz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="RRU-OO-1z1"/>
-                            <constraint firstItem="oMZ-mY-uas" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="SJ5-Iy-AT2"/>
+                            <constraint firstItem="oMZ-mY-uas" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="SJ5-Iy-AT2"/>
                             <constraint firstItem="1tc-jB-hzh" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.65" id="TdJ-Zj-I0n"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1tc-jB-hzh" secondAttribute="trailing" constant="20" id="Vom-jI-Eh1"/>
                             <constraint firstItem="Yyy-2Z-yuz" firstAttribute="top" secondItem="L0O-0r-9P8" secondAttribute="bottom" constant="43.5" id="r5B-rd-kEx"/>
@@ -67,6 +104,7 @@ For more information, tap any meteorite.</string>
                     </view>
                     <navigationItem key="navigationItem" id="6zs-Ka-nG3"/>
                     <connections>
+                        <outlet property="tableView" destination="1tc-jB-hzh" id="oLh-Tl-QDi"/>
                         <segue destination="mUC-Z2-tRF" kind="show" id="eSa-fj-8IV"/>
                     </connections>
                 </viewController>

@@ -11,23 +11,44 @@ import CoreLocation
 
 class MainViewController: UIViewController {
   
+  @IBOutlet weak var tableView: UITableView!
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-    title = "Meteo-Hits"
+        
+    checkWithDate()
+    tableViewStartUpSettings()
+  }
+  
+  func tableViewStartUpSettings () {
     
-    createArrayOfMeteoritesAfter2011()
+    tableView.setEditing(true, animated: true)
+    tableView.delegate = self
+    tableView.dataSource = self
+  }
+  
+  func checkWithDate () {
+    
+    if let timeCheck = UserDefaultsManager.shared.loadDateCheck() {
+      if timeCheck == Date(timeIntervalSince1970: 0) {
+        print("timeCheck is: timeIntervalSince1970: 0")
+        createArrayOfMeteoritesAfter2011()
+      } else if Calendar.current.isDateInToday(timeCheck) == false {
+        print("timeCheck isDateInToday = false")
+        createArrayOfMeteoritesAfter2011()
+      }
+    }
   }
   
   
   func createArrayOfMeteoritesAfter2011 () {
     
-    var finalArray = [Meteorite]()
+    var finalArray = [MeteoritesData]()
     
     getJsonFromWeb { (meteoritesData) in
       
       let yearToCompare = self.calendarDate(date: self.stringToDate(string: "2011-01-01T00:00:00.000"))
       
-      var index = 0
       for meteorite in meteoritesData {
         
         if let unwrappedYear = meteorite.year {
@@ -39,11 +60,13 @@ class MainViewController: UIViewController {
           }
         }
       }
-      print(finalArray)
+      UserDefaultsManager.shared.saveMeteorites(array: finalArray)
+      UserDefaultsManager.shared.saveDateCheck(dateCheck: Date())
+      DispatchQueue.main.async {
+        self.tableView.reloadData()
+      }
     }
-    
   }
-  
   
   func stringToDate(string: String) -> Date {
     let dateFormatter = DateFormatter()
@@ -60,7 +83,7 @@ class MainViewController: UIViewController {
     return finalYear
   }
   
-  func getJsonFromWeb(completion: @escaping ([Meteorite]) -> Void) {
+  func getJsonFromWeb(completion: @escaping ([MeteoritesData]) -> Void) {
     
     let token = "M1oRBVUlnNWYmVr8z2R7xGu7V"
     if let url = URL(string: "https://data.nasa.gov/resource/y77d-th95.json?$$app_token=\(token)") {
@@ -75,8 +98,9 @@ class MainViewController: UIViewController {
           return
         }
         do {
+          print("Fetching JSON.")
           let decoder = JSONDecoder()
-          let decodedJsonData = try decoder.decode([Meteorite].self, from: data)
+          let decodedJsonData = try decoder.decode([MeteoritesData].self, from: data)
           completion(decodedJsonData)
           
         } catch DecodingError.dataCorrupted(let context) {
@@ -99,7 +123,40 @@ class MainViewController: UIViewController {
 }
 
 
+extension MainViewController: UITableViewDataSource, UITableViewDelegate {
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    var index = 0
+    UserDefaultsManager.shared.loadMeteorites { (data) in
+      index = data.count
+    }
+    return index
+  }
+  
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
+    let cell = tableView.dequeueReusableCell(withIdentifier: "MeteoCell", for: indexPath) as! MeteoTableViewCell
+
+    UserDefaultsManager.shared.loadMeteorites { (data) in
+      cell.tableViewCellName.text = data[indexPath.row].name
+      cell.tableViewCellMass.text = data[indexPath.row].mass
+      //cell.textLabel.
+    }
+
+    return cell
+  }
+  
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    
+  }
+  
+  func tableView(_ tableView: UITableView, shouldIndentWhileEditingRowAt indexPath: IndexPath) -> Bool {
+    return false
+  }
+  
+  func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+    return .none
+  }
+}
 
 
 

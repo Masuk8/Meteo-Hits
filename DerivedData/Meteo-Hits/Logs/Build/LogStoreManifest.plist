@@ -6,7 +6,7 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
-		<key>0976E189-36B7-4DA2-B7A6-663FCB7D4E86</key>
+		<key>16BEED17-8374-4CAF-A67B-EC1855AB9C62</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -15,177 +15,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>0976E189-36B7-4DA2-B7A6-663FCB7D4E86.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>Meteo-Hits project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>Meteo-Hits</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build Meteo-Hits</string>
-			<key>timeStartedRecording</key>
-			<real>633376200.34973204</real>
-			<key>timeStoppedRecording</key>
-			<real>633376201.562819</real>
-			<key>title</key>
-			<string>Build Meteo-Hits</string>
-			<key>uniqueIdentifier</key>
-			<string>0976E189-36B7-4DA2-B7A6-663FCB7D4E86</string>
-		</dict>
-		<key>0DAB745B-9461-4B72-8F59-005FB5D6FA56</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>0DAB745B-9461-4B72-8F59-005FB5D6FA56.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>Meteo-Hits project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>Meteo-Hits</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build Meteo-Hits</string>
-			<key>timeStartedRecording</key>
-			<real>633374113.41791296</real>
-			<key>timeStoppedRecording</key>
-			<real>633374113.50626898</real>
-			<key>title</key>
-			<string>Build Meteo-Hits</string>
-			<key>uniqueIdentifier</key>
-			<string>0DAB745B-9461-4B72-8F59-005FB5D6FA56</string>
-		</dict>
-		<key>1BE017C2-C2E1-49B7-92DA-BD92FC148716</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>1BE017C2-C2E1-49B7-92DA-BD92FC148716.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>Meteo-Hits project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>Meteo-Hits</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build Meteo-Hits</string>
-			<key>timeStartedRecording</key>
-			<real>633373982.54873896</real>
-			<key>timeStoppedRecording</key>
-			<real>633373983.58084905</real>
-			<key>title</key>
-			<string>Build Meteo-Hits</string>
-			<key>uniqueIdentifier</key>
-			<string>1BE017C2-C2E1-49B7-92DA-BD92FC148716</string>
-		</dict>
-		<key>205F36EC-CF5F-47FE-A791-476B4856649A</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>205F36EC-CF5F-47FE-A791-476B4856649A.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>Meteo-Hits project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>Meteo-Hits</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build Meteo-Hits</string>
-			<key>timeStartedRecording</key>
-			<real>633373379.41777098</real>
-			<key>timeStoppedRecording</key>
-			<real>633373380.81044602</real>
-			<key>title</key>
-			<string>Build Meteo-Hits</string>
-			<key>uniqueIdentifier</key>
-			<string>205F36EC-CF5F-47FE-A791-476B4856649A</string>
-		</dict>
-		<key>2C2A4A37-56DC-471B-B390-88CE4464EAE7</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>2C2A4A37-56DC-471B-B390-88CE4464EAE7.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>Meteo-Hits project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>Meteo-Hits</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build Meteo-Hits</string>
-			<key>timeStartedRecording</key>
-			<real>633374015.36431098</real>
-			<key>timeStoppedRecording</key>
-			<real>633374016.62061501</real>
-			<key>title</key>
-			<string>Build Meteo-Hits</string>
-			<key>uniqueIdentifier</key>
-			<string>2C2A4A37-56DC-471B-B390-88CE4464EAE7</string>
-		</dict>
-		<key>325D6500-8C0B-4765-BF6B-8F3BAB86197B</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>325D6500-8C0B-4765-BF6B-8F3BAB86197B.xcactivitylog</string>
+			<string>16BEED17-8374-4CAF-A67B-EC1855AB9C62.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -202,15 +32,15 @@
 			<key>signature</key>
 			<string>Build Meteo-Hits</string>
 			<key>timeStartedRecording</key>
-			<real>633374001.93163204</real>
+			<real>633479261.90858901</real>
 			<key>timeStoppedRecording</key>
-			<real>633374002.24509704</real>
+			<real>633479263.10940599</real>
 			<key>title</key>
 			<string>Build Meteo-Hits</string>
 			<key>uniqueIdentifier</key>
-			<string>325D6500-8C0B-4765-BF6B-8F3BAB86197B</string>
+			<string>16BEED17-8374-4CAF-A67B-EC1855AB9C62</string>
 		</dict>
-		<key>49B44B1F-3AC0-43FD-AFAE-E487AF1E853B</key>
+		<key>27D2ED57-0A4B-4860-8302-D244FFEC7F73</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -219,177 +49,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>49B44B1F-3AC0-43FD-AFAE-E487AF1E853B.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>Meteo-Hits project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>Meteo-Hits</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build Meteo-Hits</string>
-			<key>timeStartedRecording</key>
-			<real>633374641.20622802</real>
-			<key>timeStoppedRecording</key>
-			<real>633374642.15836</real>
-			<key>title</key>
-			<string>Build Meteo-Hits</string>
-			<key>uniqueIdentifier</key>
-			<string>49B44B1F-3AC0-43FD-AFAE-E487AF1E853B</string>
-		</dict>
-		<key>4E371D45-9BD7-4DC8-9EB4-6D025E3D299F</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>4E371D45-9BD7-4DC8-9EB4-6D025E3D299F.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>Meteo-Hits project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>Meteo-Hits</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build Meteo-Hits</string>
-			<key>timeStartedRecording</key>
-			<real>633374088.01491499</real>
-			<key>timeStoppedRecording</key>
-			<real>633374088.90053201</real>
-			<key>title</key>
-			<string>Build Meteo-Hits</string>
-			<key>uniqueIdentifier</key>
-			<string>4E371D45-9BD7-4DC8-9EB4-6D025E3D299F</string>
-		</dict>
-		<key>74D1651D-DB10-46A8-9557-91481ED552B7</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>74D1651D-DB10-46A8-9557-91481ED552B7.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>Meteo-Hits project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>Meteo-Hits</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build Meteo-Hits</string>
-			<key>timeStartedRecording</key>
-			<real>633375403.33124995</real>
-			<key>timeStoppedRecording</key>
-			<real>633375404.34810901</real>
-			<key>title</key>
-			<string>Build Meteo-Hits</string>
-			<key>uniqueIdentifier</key>
-			<string>74D1651D-DB10-46A8-9557-91481ED552B7</string>
-		</dict>
-		<key>75E87E2F-30F3-48A7-AD8C-CA6DDF69790B</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>75E87E2F-30F3-48A7-AD8C-CA6DDF69790B.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>Meteo-Hits project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>Meteo-Hits</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build Meteo-Hits</string>
-			<key>timeStartedRecording</key>
-			<real>633376424.95779705</real>
-			<key>timeStoppedRecording</key>
-			<real>633376426.88054097</real>
-			<key>title</key>
-			<string>Build Meteo-Hits</string>
-			<key>uniqueIdentifier</key>
-			<string>75E87E2F-30F3-48A7-AD8C-CA6DDF69790B</string>
-		</dict>
-		<key>7A034156-E516-4D86-86B9-62AD75591033</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>7A034156-E516-4D86-86B9-62AD75591033.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>Meteo-Hits project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>Meteo-Hits</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build Meteo-Hits</string>
-			<key>timeStartedRecording</key>
-			<real>633373960.32091999</real>
-			<key>timeStoppedRecording</key>
-			<real>633373962.45983398</real>
-			<key>title</key>
-			<string>Build Meteo-Hits</string>
-			<key>uniqueIdentifier</key>
-			<string>7A034156-E516-4D86-86B9-62AD75591033</string>
-		</dict>
-		<key>7DE5A3FE-967C-404F-A946-F98140CBC2E0</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>7DE5A3FE-967C-404F-A946-F98140CBC2E0.xcactivitylog</string>
+			<string>27D2ED57-0A4B-4860-8302-D244FFEC7F73.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -406,15 +66,15 @@
 			<key>signature</key>
 			<string>Build Meteo-Hits</string>
 			<key>timeStartedRecording</key>
-			<real>633375915.76131105</real>
+			<real>633477685.09515405</real>
 			<key>timeStoppedRecording</key>
-			<real>633375916.33734</real>
+			<real>633477685.70788705</real>
 			<key>title</key>
 			<string>Build Meteo-Hits</string>
 			<key>uniqueIdentifier</key>
-			<string>7DE5A3FE-967C-404F-A946-F98140CBC2E0</string>
+			<string>27D2ED57-0A4B-4860-8302-D244FFEC7F73</string>
 		</dict>
-		<key>8490F736-28A4-47D0-B52F-6DF5943A241E</key>
+		<key>382DBE5C-7DFA-419C-AB4B-8A1A16C833A6</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -423,7 +83,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>8490F736-28A4-47D0-B52F-6DF5943A241E.xcactivitylog</string>
+			<string>382DBE5C-7DFA-419C-AB4B-8A1A16C833A6.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -440,15 +100,15 @@
 			<key>signature</key>
 			<string>Build Meteo-Hits</string>
 			<key>timeStartedRecording</key>
-			<real>633375250.09753299</real>
+			<real>633478175.10627604</real>
 			<key>timeStoppedRecording</key>
-			<real>633375251.20370805</real>
+			<real>633478180.97500002</real>
 			<key>title</key>
 			<string>Build Meteo-Hits</string>
 			<key>uniqueIdentifier</key>
-			<string>8490F736-28A4-47D0-B52F-6DF5943A241E</string>
+			<string>382DBE5C-7DFA-419C-AB4B-8A1A16C833A6</string>
 		</dict>
-		<key>8B8C33F5-FF85-43D5-94A8-D70506F91CA1</key>
+		<key>5F8DCD86-9F23-40DE-98E7-9409A352F82C</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -457,7 +117,41 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>8B8C33F5-FF85-43D5-94A8-D70506F91CA1.xcactivitylog</string>
+			<string>5F8DCD86-9F23-40DE-98E7-9409A352F82C.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Meteo-Hits project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Meteo-Hits</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build Meteo-Hits</string>
+			<key>timeStartedRecording</key>
+			<real>633477577.178792</real>
+			<key>timeStoppedRecording</key>
+			<real>633477583.07879305</real>
+			<key>title</key>
+			<string>Build Meteo-Hits</string>
+			<key>uniqueIdentifier</key>
+			<string>5F8DCD86-9F23-40DE-98E7-9409A352F82C</string>
+		</dict>
+		<key>74B0D440-CA7C-4675-96E1-2D25C77D51BF</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>74B0D440-CA7C-4675-96E1-2D25C77D51BF.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -474,15 +168,15 @@
 			<key>signature</key>
 			<string>Build Meteo-Hits</string>
 			<key>timeStartedRecording</key>
-			<real>633374610.98135102</real>
+			<real>633469052.13326705</real>
 			<key>timeStoppedRecording</key>
-			<real>633374612.09314096</real>
+			<real>633469054.01780903</real>
 			<key>title</key>
 			<string>Build Meteo-Hits</string>
 			<key>uniqueIdentifier</key>
-			<string>8B8C33F5-FF85-43D5-94A8-D70506F91CA1</string>
+			<string>74B0D440-CA7C-4675-96E1-2D25C77D51BF</string>
 		</dict>
-		<key>922CCBC3-4E41-40A3-B3F0-262093CA482D</key>
+		<key>7ED71D24-6F11-474F-B3AA-B0424531F77A</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -491,7 +185,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>922CCBC3-4E41-40A3-B3F0-262093CA482D.xcactivitylog</string>
+			<string>7ED71D24-6F11-474F-B3AA-B0424531F77A.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -508,15 +202,15 @@
 			<key>signature</key>
 			<string>Build Meteo-Hits</string>
 			<key>timeStartedRecording</key>
-			<real>633375027.62660694</real>
+			<real>633479332.567963</real>
 			<key>timeStoppedRecording</key>
-			<real>633375028.93884802</real>
+			<real>633479332.660164</real>
 			<key>title</key>
 			<string>Build Meteo-Hits</string>
 			<key>uniqueIdentifier</key>
-			<string>922CCBC3-4E41-40A3-B3F0-262093CA482D</string>
+			<string>7ED71D24-6F11-474F-B3AA-B0424531F77A</string>
 		</dict>
-		<key>9500173D-22F7-47B4-A0B9-191482AF563F</key>
+		<key>95A82CFC-230B-4BAA-9677-037099B1D5E6</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -525,7 +219,75 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>9500173D-22F7-47B4-A0B9-191482AF563F.xcactivitylog</string>
+			<string>95A82CFC-230B-4BAA-9677-037099B1D5E6.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Meteo-Hits project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Meteo-Hits</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build Meteo-Hits</string>
+			<key>timeStartedRecording</key>
+			<real>633477719.40605497</real>
+			<key>timeStoppedRecording</key>
+			<real>633477720.44267905</real>
+			<key>title</key>
+			<string>Build Meteo-Hits</string>
+			<key>uniqueIdentifier</key>
+			<string>95A82CFC-230B-4BAA-9677-037099B1D5E6</string>
+		</dict>
+		<key>9D9D57C7-F586-4509-A44B-FE48AFE801AB</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>9D9D57C7-F586-4509-A44B-FE48AFE801AB.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Meteo-Hits project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Meteo-Hits</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build Meteo-Hits</string>
+			<key>timeStartedRecording</key>
+			<real>633477703.75520396</real>
+			<key>timeStoppedRecording</key>
+			<real>633477704.62214601</real>
+			<key>title</key>
+			<string>Build Meteo-Hits</string>
+			<key>uniqueIdentifier</key>
+			<string>9D9D57C7-F586-4509-A44B-FE48AFE801AB</string>
+		</dict>
+		<key>C7A9A7E6-34EB-4DCC-BB64-4FEC64EDD064</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>C7A9A7E6-34EB-4DCC-BB64-4FEC64EDD064.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -542,15 +304,15 @@
 			<key>signature</key>
 			<string>Build Meteo-Hits</string>
 			<key>timeStartedRecording</key>
-			<real>633374044.479949</real>
+			<real>633478160.0539</real>
 			<key>timeStoppedRecording</key>
-			<real>633374045.50907195</real>
+			<real>633478161.14927101</real>
 			<key>title</key>
 			<string>Build Meteo-Hits</string>
 			<key>uniqueIdentifier</key>
-			<string>9500173D-22F7-47B4-A0B9-191482AF563F</string>
+			<string>C7A9A7E6-34EB-4DCC-BB64-4FEC64EDD064</string>
 		</dict>
-		<key>9E9E15FA-641B-4DE7-AEC9-A4584B44603A</key>
+		<key>D0F5D550-CDDE-45F0-8EAB-17F828079DCC</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -559,7 +321,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>9E9E15FA-641B-4DE7-AEC9-A4584B44603A.xcactivitylog</string>
+			<string>D0F5D550-CDDE-45F0-8EAB-17F828079DCC.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -576,15 +338,15 @@
 			<key>signature</key>
 			<string>Build Meteo-Hits</string>
 			<key>timeStartedRecording</key>
-			<real>633376184.25850296</real>
+			<real>633478102.24881804</real>
 			<key>timeStoppedRecording</key>
-			<real>633376185.52787697</real>
+			<real>633478107.18527305</real>
 			<key>title</key>
 			<string>Build Meteo-Hits</string>
 			<key>uniqueIdentifier</key>
-			<string>9E9E15FA-641B-4DE7-AEC9-A4584B44603A</string>
+			<string>D0F5D550-CDDE-45F0-8EAB-17F828079DCC</string>
 		</dict>
-		<key>A9F36634-1ED9-4A2F-8A46-F01633ED84C3</key>
+		<key>D3ED0E7C-3E2B-47B3-ACB6-74201C9370DC</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -593,7 +355,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>A9F36634-1ED9-4A2F-8A46-F01633ED84C3.xcactivitylog</string>
+			<string>D3ED0E7C-3E2B-47B3-ACB6-74201C9370DC.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -610,15 +372,15 @@
 			<key>signature</key>
 			<string>Build Meteo-Hits</string>
 			<key>timeStartedRecording</key>
-			<real>633376491.99571002</real>
+			<real>633479565.07714796</real>
 			<key>timeStoppedRecording</key>
-			<real>633376493.30255306</real>
+			<real>633479569.89075005</real>
 			<key>title</key>
 			<string>Build Meteo-Hits</string>
 			<key>uniqueIdentifier</key>
-			<string>A9F36634-1ED9-4A2F-8A46-F01633ED84C3</string>
+			<string>D3ED0E7C-3E2B-47B3-ACB6-74201C9370DC</string>
 		</dict>
-		<key>B998E517-3132-4C82-94D2-8617EE9C5AE7</key>
+		<key>E54AA79A-5B0E-466E-8ABF-F9F5E14EE564</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -627,7 +389,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>B998E517-3132-4C82-94D2-8617EE9C5AE7.xcactivitylog</string>
+			<string>E54AA79A-5B0E-466E-8ABF-F9F5E14EE564.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -644,81 +406,13 @@
 			<key>signature</key>
 			<string>Build Meteo-Hits</string>
 			<key>timeStartedRecording</key>
-			<real>633373861.34298396</real>
+			<real>633479285.84707105</real>
 			<key>timeStoppedRecording</key>
-			<real>633373867.48765194</real>
+			<real>633479294.78072798</real>
 			<key>title</key>
 			<string>Build Meteo-Hits</string>
 			<key>uniqueIdentifier</key>
-			<string>B998E517-3132-4C82-94D2-8617EE9C5AE7</string>
-		</dict>
-		<key>C89F99EC-3477-4666-9B2B-3AEB110EC576</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>C89F99EC-3477-4666-9B2B-3AEB110EC576.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>Meteo-Hits project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>Meteo-Hits</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build Meteo-Hits</string>
-			<key>timeStartedRecording</key>
-			<real>633373897.06667602</real>
-			<key>timeStoppedRecording</key>
-			<real>633373898.50796604</real>
-			<key>title</key>
-			<string>Build Meteo-Hits</string>
-			<key>uniqueIdentifier</key>
-			<string>C89F99EC-3477-4666-9B2B-3AEB110EC576</string>
-		</dict>
-		<key>DF01DDCA-974D-45C1-A748-EFAFCEBEA2D8</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>DF01DDCA-974D-45C1-A748-EFAFCEBEA2D8.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>Meteo-Hits project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>Meteo-Hits</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build Meteo-Hits</string>
-			<key>timeStartedRecording</key>
-			<real>633374573.22632396</real>
-			<key>timeStoppedRecording</key>
-			<real>633374575.23994303</real>
-			<key>title</key>
-			<string>Build Meteo-Hits</string>
-			<key>uniqueIdentifier</key>
-			<string>DF01DDCA-974D-45C1-A748-EFAFCEBEA2D8</string>
+			<string>E54AA79A-5B0E-466E-8ABF-F9F5E14EE564</string>
 		</dict>
 	</dict>
 </dict>

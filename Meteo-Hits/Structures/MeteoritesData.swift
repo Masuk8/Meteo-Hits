@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Meteorite: Codable {
+struct MeteoritesData: Codable {
   let name: String
   let mass: String?
   let year: String?
