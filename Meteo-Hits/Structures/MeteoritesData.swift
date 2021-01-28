@@ -18,5 +18,3 @@ struct Geolocation: Codable {
   let type: String
   let coordinates: [Double]
 }
-
-

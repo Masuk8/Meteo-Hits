@@ -113,6 +113,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA4E18C725BF0C4B00471583 /* Build configuration list for PBXNativeTarget "Meteo-Hits" */;
 			buildPhases = (
+				FA44126C25C222A600C703B2 /* Run Script */,
 				FA4E18AF25BF0C4700471583 /* Sources */,
 				FA4E18B025BF0C4700471583 /* Frameworks */,
 				FA4E18B125BF0C4700471583 /* Resources */,
@@ -171,6 +172,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		FA44126C25C222A600C703B2 /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "exit\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FA4E18AF25BF0C4700471583 /* Sources */ = {

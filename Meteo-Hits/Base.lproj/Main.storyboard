@@ -45,7 +45,7 @@ For more information, tap any meteorite.</string>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1tc-jB-hzh">
                                 <rect key="frame" x="20" y="359" width="374" height="503"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MeteoCell" id="KlT-FC-0Ea" customClass="MeteoTableViewCell" customModule="Meteo_Hits" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="gray" indentationWidth="10" reuseIdentifier="MeteoCell" rowHeight="43.5" id="KlT-FC-0Ea" customClass="MeteoTableViewCell" customModule="Meteo_Hits" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KlT-FC-0Ea" id="I1X-Ug-Gup">
@@ -53,15 +53,18 @@ For more information, tap any meteorite.</string>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nwc-sW-fn6">
-                                                    <rect key="frame" x="15" y="11.5" width="42.5" height="21"/>
+                                                    <rect key="frame" x="15" y="11.5" width="113.5" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="tuS-bQ-dpR"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mass" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cTI-se-MIT">
-                                                    <rect key="frame" x="249" y="11.5" width="110" height="21"/>
+                                                    <rect key="frame" x="313.5" y="11.5" width="40.5" height="21"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="110" id="5TB-fx-zq9"/>
+                                                        <constraint firstAttribute="height" constant="21" id="emN-ZE-iEO"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -69,10 +72,11 @@ For more information, tap any meteorite.</string>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="nwc-sW-fn6" firstAttribute="centerY" secondItem="I1X-Ug-Gup" secondAttribute="centerY" id="7Hc-kb-QjQ"/>
+                                                <constraint firstItem="cTI-se-MIT" firstAttribute="bottom" secondItem="I1X-Ug-Gup" secondAttribute="bottomMargin" id="Bnt-8o-Wc9"/>
+                                                <constraint firstItem="cTI-se-MIT" firstAttribute="leading" secondItem="nwc-sW-fn6" secondAttribute="trailing" constant="185" id="FS5-RU-CbD"/>
+                                                <constraint firstItem="cTI-se-MIT" firstAttribute="baseline" secondItem="nwc-sW-fn6" secondAttribute="baseline" id="HPg-Ak-F3R"/>
                                                 <constraint firstItem="nwc-sW-fn6" firstAttribute="leading" secondItem="I1X-Ug-Gup" secondAttribute="leading" constant="15" id="WGV-ry-7a4"/>
-                                                <constraint firstAttribute="trailing" secondItem="cTI-se-MIT" secondAttribute="trailing" constant="15" id="laY-nl-k9k"/>
-                                                <constraint firstItem="cTI-se-MIT" firstAttribute="centerY" secondItem="I1X-Ug-Gup" secondAttribute="centerY" id="vrg-ZB-qC6"/>
+                                                <constraint firstAttribute="trailing" secondItem="cTI-se-MIT" secondAttribute="trailing" constant="20" symbolic="YES" id="laY-nl-k9k"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -105,7 +109,7 @@ For more information, tap any meteorite.</string>
                     <navigationItem key="navigationItem" id="6zs-Ka-nG3"/>
                     <connections>
                         <outlet property="tableView" destination="1tc-jB-hzh" id="oLh-Tl-QDi"/>
-                        <segue destination="mUC-Z2-tRF" kind="show" id="eSa-fj-8IV"/>
+                        <segue destination="mUC-Z2-tRF" kind="show" identifier="mapSegue" id="eSa-fj-8IV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -115,7 +119,7 @@ For more information, tap any meteorite.</string>
         <!--Map View Controller-->
         <scene sceneID="vnh-KE-CF4">
             <objects>
-                <viewController id="mUC-Z2-tRF" customClass="MapViewController" sceneMemberID="viewController">
+                <viewController id="mUC-Z2-tRF" customClass="MapViewController" customModule="Meteo_Hits" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pg0-Io-rAj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -134,6 +138,9 @@ For more information, tap any meteorite.</string>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Igi-1Q-nO7"/>
+                    <connections>
+                        <outlet property="mapView" destination="sfh-l1-rpk" id="yGX-fh-YOT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W8q-eU-Vwa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

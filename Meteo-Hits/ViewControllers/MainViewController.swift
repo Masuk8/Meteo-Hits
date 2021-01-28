@@ -13,18 +13,24 @@ class MainViewController: UIViewController {
   
   @IBOutlet weak var tableView: UITableView!
   
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if let yourVC = segue.destination as? MapViewController {
+      yourVC.location = (sender as? [Double] ?? [0, 0])
+    }
+  }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-        
+    
     checkWithDate()
     tableViewStartUpSettings()
   }
   
   func tableViewStartUpSettings () {
     
-    tableView.setEditing(true, animated: true)
     tableView.delegate = self
     tableView.dataSource = self
+    tableView.allowsSelection = true
   }
   
   func checkWithDate () {
@@ -40,7 +46,6 @@ class MainViewController: UIViewController {
     }
   }
   
-  
   func createArrayOfMeteoritesAfter2011 () {
     
     var finalArray = [MeteoritesData]()
@@ -53,9 +58,8 @@ class MainViewController: UIViewController {
         
         if let unwrappedYear = meteorite.year {
           let meteoriteYear = self.calendarDate(date: self.stringToDate(string: unwrappedYear))
-
+          
           if meteoriteYear > yearToCompare {
-            
             finalArray.append(meteorite)
           }
         }
@@ -89,7 +93,7 @@ class MainViewController: UIViewController {
     if let url = URL(string: "https://data.nasa.gov/resource/y77d-th95.json?$$app_token=\(token)") {
       
       let request = URLRequest(url: url)
-      URLSession.shared.dataTask(with: request) { (data, response, error) in
+      URLSession.shared.dataTask(with: request) { (data, _, error) in
         if let error = error {
           print(error.localizedDescription)
           return
@@ -122,7 +126,6 @@ class MainViewController: UIViewController {
   }
 }
 
-
 extension MainViewController: UITableViewDataSource, UITableViewDelegate {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     var index = 0
@@ -133,30 +136,43 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
+    
     let cell = tableView.dequeueReusableCell(withIdentifier: "MeteoCell", for: indexPath) as! MeteoTableViewCell
-
+    
     UserDefaultsManager.shared.loadMeteorites { (data) in
       cell.tableViewCellName.text = data[indexPath.row].name
       cell.tableViewCellMass.text = data[indexPath.row].mass
-      //cell.textLabel.
     }
-
+    
     return cell
   }
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    
+        
+    UserDefaultsManager.shared.loadMeteorites { (data) in
+      
+      let location = data[indexPath.row].geolocation?.coordinates
+      
+      let destinationVC = MapViewController()
+      destinationVC.location = location!
+      
+            
+      self.performSegue(withIdentifier: "mapSegue", sender: location)
+    }
   }
+  
+  
+
+  
   
   func tableView(_ tableView: UITableView, shouldIndentWhileEditingRowAt indexPath: IndexPath) -> Bool {
     return false
   }
   
+  
+  
   func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
     return .none
   }
 }
-
-
 

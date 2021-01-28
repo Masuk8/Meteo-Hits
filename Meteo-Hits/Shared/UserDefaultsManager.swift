@@ -8,27 +8,27 @@
 import Foundation
 
 class UserDefaultsManager {
-  
+
   static let shared = UserDefaultsManager()
-  
+
   func saveMeteorites (array: [MeteoritesData]) {
-    UserDefaults.standard.set(try? PropertyListEncoder().encode(array), forKey:"meteoKey")
+    UserDefaults.standard.set(try? PropertyListEncoder().encode(array), forKey: "meteoKey")
   }
-  
+
   func loadMeteorites(completion: @escaping ([MeteoritesData]) -> Void) {
-    
-    if let data = UserDefaults.standard.value(forKey:"meteoKey") as? Data {
+
+    if let data = UserDefaults.standard.value(forKey: "meteoKey") as? Data {
       let meteorites = try? PropertyListDecoder().decode(Array<MeteoritesData>.self, from: data)
-      if let unwrappedMeteorites = meteorites  {
+      if let unwrappedMeteorites = meteorites {
         completion(unwrappedMeteorites)
       }
     }
   }
-  
+
   func saveDateCheck (dateCheck: Date) {
     UserDefaults.standard.set(dateCheck, forKey: "keyCheck")
   }
-    
+
   func loadDateCheck () -> Date? {
     let userDefs = UserDefaults.standard
     guard let dateCheck = userDefs.value(forKey: "keyCheck") as? Date else {
@@ -37,5 +37,3 @@ class UserDefaultsManager {
     return dateCheck
   }
 }
-  
-
