@@ -116,7 +116,7 @@ For more information, tap any meteorite.</string>
             </objects>
             <point key="canvasLocation" x="778" y="-208"/>
         </scene>
-        <!--fgg-->
+        <!--Map View Controller-->
         <scene sceneID="vnh-KE-CF4">
             <objects>
                 <viewController id="mUC-Z2-tRF" customClass="MapViewController" customModule="Meteo_Hits" customModuleProvider="target" sceneMemberID="viewController">
@@ -137,9 +137,7 @@ For more information, tap any meteorite.</string>
                             <constraint firstItem="sfh-l1-rpk" firstAttribute="top" secondItem="rhW-F9-3qH" secondAttribute="top" id="sxb-0a-6QU"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="fgg" id="Igi-1Q-nO7">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="w6W-fl-b0a"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="Igi-1Q-nO7"/>
                     <connections>
                         <outlet property="mapView" destination="sfh-l1-rpk" id="yGX-fh-YOT"/>
                     </connections>
