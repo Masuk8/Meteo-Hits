@@ -10,13 +10,20 @@ import UIKit
 
 class MapViewController: UIViewController {
   
+  
+  
   var location: [Double] = []
 
   @IBOutlet weak var mapView: MKMapView!
   
   
   override func viewWillAppear(_ animated: Bool) {
-
+    self.navigationController?.setNavigationBarHidden(false, animated: animated)
+  }
+  
+  override func viewWillDisappear(_ animated: Bool) {
+    super.viewWillDisappear(animated)
+    self.navigationController?.setNavigationBarHidden(false, animated: animated)
   }
   
     override func viewDidLoad() {

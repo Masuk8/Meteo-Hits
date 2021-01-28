@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ihc-a0-9TC">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -109,14 +109,14 @@ For more information, tap any meteorite.</string>
                     <navigationItem key="navigationItem" id="6zs-Ka-nG3"/>
                     <connections>
                         <outlet property="tableView" destination="1tc-jB-hzh" id="oLh-Tl-QDi"/>
-                        <segue destination="mUC-Z2-tRF" kind="show" identifier="mapSegue" id="eSa-fj-8IV"/>
+                        <segue destination="mUC-Z2-tRF" kind="show" identifier="mapSegue" id="TBJ-jT-lbU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="886.95652173913049" y="86.383928571428569"/>
+            <point key="canvasLocation" x="778" y="-208"/>
         </scene>
-        <!--Map View Controller-->
+        <!--fgg-->
         <scene sceneID="vnh-KE-CF4">
             <objects>
                 <viewController id="mUC-Z2-tRF" customClass="MapViewController" customModule="Meteo_Hits" customModuleProvider="target" sceneMemberID="viewController">
@@ -137,27 +137,30 @@ For more information, tap any meteorite.</string>
                             <constraint firstItem="sfh-l1-rpk" firstAttribute="top" secondItem="rhW-F9-3qH" secondAttribute="top" id="sxb-0a-6QU"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Igi-1Q-nO7"/>
+                    <navigationItem key="navigationItem" title="fgg" id="Igi-1Q-nO7">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="w6W-fl-b0a"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="sfh-l1-rpk" id="yGX-fh-YOT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W8q-eU-Vwa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1874" y="86"/>
+            <point key="canvasLocation" x="1714" y="-137"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CtB-Ie-dJL">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ihc-a0-9TC" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="YVk-PT-wWb">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ap7-vp-WG5"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="JRn-AM-SHk"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jbJ-4y-wP7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
