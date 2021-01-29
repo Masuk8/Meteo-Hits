@@ -137,22 +137,19 @@ class MainViewController: UIViewController {
 extension MainViewController: UITableViewDataSource, UITableViewDelegate {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     var index = 0
-    let data = UserDefaultsManager.shared.loadMeteorites
-    index = data().count
+    let data = UserDefaultsManager.shared.loadMeteorites()
+    index = data.count
 
     return index
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
     let cell = tableView.dequeueReusableCell(withIdentifier: "MeteoCell", for: indexPath) as! MeteoTableViewCell
-
-    let data = UserDefaultsManager.shared.loadMeteorites
-
+    let data = UserDefaultsManager.shared.loadMeteorites()
     cell.tableViewCellName.sizeToFit()
-    cell.tableViewCellName.text = data()[indexPath.row].name
+    cell.tableViewCellName.text = data[indexPath.row].name
     cell.tableViewCellMass.sizeToFit()
-    cell.tableViewCellMass.text = data()[indexPath.row].mass
+    cell.tableViewCellMass.text = data[indexPath.row].mass
     meteoriteImageView.isHidden = true
     return cell
   }
