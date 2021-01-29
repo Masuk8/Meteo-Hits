@@ -17,13 +17,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meteo-Hits" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L0O-0r-9P8">
-                                <rect key="frame" x="138.5" y="108" width="137.5" height="33.5"/>
+                                <rect key="frame" x="138.5" y="88" width="137.5" height="33.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yyy-2Z-yuz">
-                                <rect key="frame" x="20" y="185" width="374" height="41"/>
+                                <rect key="frame" x="20" y="165" width="374" height="41"/>
                                 <string key="text">Here is a list of meteorites since 01.01.2011.
 For a location of impact, tap any meteorite.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -102,7 +102,7 @@ For a location of impact, tap any meteorite.</string>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1tc-jB-hzh" secondAttribute="trailing" constant="20" id="Vom-jI-Eh1"/>
                             <constraint firstItem="Yyy-2Z-yuz" firstAttribute="top" secondItem="L0O-0r-9P8" secondAttribute="bottom" constant="43.5" id="r5B-rd-kEx"/>
                             <constraint firstItem="L0O-0r-9P8" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="rer-0w-vtr"/>
-                            <constraint firstItem="L0O-0r-9P8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="w6L-Ea-pq6"/>
+                            <constraint firstItem="L0O-0r-9P8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="w6L-Ea-pq6"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6zs-Ka-nG3"/>
@@ -143,7 +143,7 @@ For a location of impact, tap any meteorite.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W8q-eU-Vwa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1714" y="-137"/>
+            <point key="canvasLocation" x="1539" y="-158"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CtB-Ie-dJL">
@@ -162,7 +162,7 @@ For a location of impact, tap any meteorite.</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jbJ-4y-wP7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-23.188405797101453" y="86.383928571428569"/>
+            <point key="canvasLocation" x="16" y="-87"/>
         </scene>
     </scenes>
     <resources>

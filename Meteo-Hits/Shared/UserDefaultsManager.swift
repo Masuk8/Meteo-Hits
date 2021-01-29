@@ -14,15 +14,13 @@ class UserDefaultsManager {
   func saveMeteorites (array: [MeteoritesData]) {
     UserDefaults.standard.set(try? PropertyListEncoder().encode(array), forKey: "meteoKey")
   }
-
-  func loadMeteorites(completion: @escaping ([MeteoritesData]) -> Void) {
-
-    if let data = UserDefaults.standard.value(forKey: "meteoKey") as? Data {
+  
+  func loadMeteorites() -> [MeteoritesData] {
+    
+    guard let data = UserDefaults.standard.value(forKey: "meteoKey") as? Data else {return []}
       let meteorites = try? PropertyListDecoder().decode(Array<MeteoritesData>.self, from: data)
-      if let unwrappedMeteorites = meteorites {
-        completion(unwrappedMeteorites)
-      }
-    }
+      guard let unwrappedMeteorites = meteorites else { return [] }
+    return unwrappedMeteorites
   }
 
   func saveDateCheck (dateCheck: Date) {

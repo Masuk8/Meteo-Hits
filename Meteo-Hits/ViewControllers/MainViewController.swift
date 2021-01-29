@@ -21,7 +21,11 @@ class MainViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-  }
+    navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+    navigationController?.navigationBar.shadowImage = UIImage()
+    navigationController?.navigationBar.isTranslucent = true
+    navigationController?.navigationBar.barStyle = .black
+    }
   
   func tableViewStartUpSettings () {
     
@@ -35,11 +39,8 @@ class MainViewController: UIViewController {
   func checkWithDate () {
     
     if let timeCheck = UserDefaultsManager.shared.loadDateCheck() {
-      if timeCheck == Date(timeIntervalSince1970: 0) {
+      if timeCheck == Date(timeIntervalSince1970: 0) || Calendar.current.isDateInToday(timeCheck) == false {
         print("timeCheck is: timeIntervalSince1970: 0")
-        createArrayOfMeteoritesAfter2011()
-      } else if Calendar.current.isDateInToday(timeCheck) == false {
-        print("timeCheck isDateInToday = false")
         createArrayOfMeteoritesAfter2011()
       }
     }
@@ -134,9 +135,9 @@ class MainViewController: UIViewController {
 extension MainViewController: UITableViewDataSource, UITableViewDelegate {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     var index = 0
-    UserDefaultsManager.shared.loadMeteorites { (data) in
-      index = data.count
-    }
+    let data = UserDefaultsManager.shared.loadMeteorites
+    index = data().count
+    
     return index
   }
   
@@ -144,28 +145,30 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     
     let cell = tableView.dequeueReusableCell(withIdentifier: "MeteoCell", for: indexPath) as! MeteoTableViewCell
     
-    UserDefaultsManager.shared.loadMeteorites { (data) in
+    let data = UserDefaultsManager.shared.loadMeteorites
+    
       cell.tableViewCellName.sizeToFit()
-      cell.tableViewCellName.text = data[indexPath.row].name
+    cell.tableViewCellName.text = data()[indexPath.row].name
       cell.tableViewCellMass.sizeToFit()
-      cell.tableViewCellMass.text = data[indexPath.row].mass
-    }
+    cell.tableViewCellMass.text = data()[indexPath.row].mass
+    
     
     return cell
   }
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    
+    let data = UserDefaultsManager.shared.loadMeteorites
         
-    UserDefaultsManager.shared.loadMeteorites { (data) in
       
-      let location = data[indexPath.row].geolocation?.coordinates
+    let location = data()[indexPath.row].geolocation?.coordinates
       
       let destinationVC = MapViewController()
       destinationVC.location = location!
       
             
       self.performSegue(withIdentifier: "mapSegue", sender: location)
-    }
+    
   }
   
   
