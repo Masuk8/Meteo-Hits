@@ -16,20 +16,19 @@ class MapViewController: UIViewController {
 
   override func viewWillAppear(_ animated: Bool) {
     self.navigationController?.setNavigationBarHidden(false, animated: animated)
+    navigationController?.navigationBar.barStyle = .default
   }
 
   override func viewWillDisappear(_ animated: Bool) {
     super.viewWillDisappear(animated)
-    self.navigationController?.setNavigationBarHidden(false, animated: animated)
   }
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    navigationController?.navigationBar.barTintColor = .black
     placePin()
   }
 
-  func placePin() {
+  private func placePin() {
     let annotation = MKPointAnnotation()
     let centerCoordinate = CLLocationCoordinate2DMake(location[1], location[0])
     annotation.coordinate = centerCoordinate
@@ -37,7 +36,7 @@ class MapViewController: UIViewController {
     centerMapOnLocation()
   }
 
-  func centerMapOnLocation() {
+  private func centerMapOnLocation() {
     let centerCoordinate = CLLocationCoordinate2DMake(location[1], location[0])
     mapView.centerCoordinate = centerCoordinate
   }

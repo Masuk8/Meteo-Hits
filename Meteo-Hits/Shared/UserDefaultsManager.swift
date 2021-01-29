@@ -16,7 +16,6 @@ class UserDefaultsManager {
   }
 
   func loadMeteorites() -> [MeteoritesData] {
-
     guard let data = UserDefaults.standard.value(forKey: "meteoKey") as? Data else {return []}
     let meteorites = try? PropertyListDecoder().decode(Array<MeteoritesData>.self, from: data)
     guard let unwrappedMeteorites = meteorites else { return [] }

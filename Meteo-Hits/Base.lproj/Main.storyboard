@@ -17,31 +17,45 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meteo-Hits" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L0O-0r-9P8">
-                                <rect key="frame" x="138.5" y="88" width="137.5" height="33.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <rect key="frame" x="127.5" y="88" width="159.5" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yyy-2Z-yuz">
-                                <rect key="frame" x="20" y="165" width="374" height="41"/>
+                                <rect key="frame" x="20" y="167.5" width="374" height="41"/>
                                 <string key="text">Here is a list of meteorites since 01.01.2011.
 For a location of impact, tap any meteorite.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oMZ-mY-uas">
-                                <rect key="frame" x="35" y="313.5" width="45" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Mass(in grams)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0nv-s7-bJr">
-                                <rect key="frame" x="261" y="313.5" width="118" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SOi-Hc-DWQ" userLabel="Name and Mass background View">
+                                <rect key="frame" x="20" y="309" width="374" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Mass(in grams)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0nv-s7-bJr">
+                                        <rect key="frame" x="232" y="14.5" width="127" height="21"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" red="0.1137254902" green="0.13725490200000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oMZ-mY-uas">
+                                        <rect key="frame" x="15" y="14.5" width="48" height="21"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" red="0.1137254902" green="0.13725490200000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="0nv-s7-bJr" secondAttribute="trailing" constant="15" id="2jF-ff-qEL"/>
+                                    <constraint firstItem="0nv-s7-bJr" firstAttribute="centerY" secondItem="SOi-Hc-DWQ" secondAttribute="centerY" id="AFX-Wp-yfk"/>
+                                    <constraint firstItem="oMZ-mY-uas" firstAttribute="leading" secondItem="SOi-Hc-DWQ" secondAttribute="leading" constant="15" id="FwB-XF-aRu"/>
+                                    <constraint firstItem="0nv-s7-bJr" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="oMZ-mY-uas" secondAttribute="trailing" constant="8" symbolic="YES" id="Rah-QX-w2e"/>
+                                    <constraint firstAttribute="height" constant="50" id="VsC-tU-9W1"/>
+                                    <constraint firstItem="oMZ-mY-uas" firstAttribute="centerY" secondItem="SOi-Hc-DWQ" secondAttribute="centerY" id="c3U-Zd-Zso"/>
+                                </constraints>
+                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1tc-jB-hzh">
                                 <rect key="frame" x="20" y="359" width="374" height="503"/>
                                 <prototypes>
@@ -84,55 +98,34 @@ For a location of impact, tap any meteorite.</string>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="efL-x6-97s">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Meteorite" translatesAutoresizingMaskIntoConstraints="NO" id="Gyv-4u-bpp">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
-                                    </imageView>
-                                </subviews>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="Gyv-4u-bpp" secondAttribute="bottom" id="NWa-dt-Vzn"/>
-                                    <constraint firstAttribute="trailing" secondItem="Gyv-4u-bpp" secondAttribute="trailing" id="r2D-Ry-OM9"/>
-                                    <constraint firstItem="Gyv-4u-bpp" firstAttribute="top" secondItem="efL-x6-97s" secondAttribute="top" id="sZW-hN-cyv"/>
-                                    <constraint firstItem="Gyv-4u-bpp" firstAttribute="leading" secondItem="efL-x6-97s" secondAttribute="leading" id="y7A-FD-r0B"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="0nv-s7-bJr" firstAttribute="leading" relation="lessThanOrEqual" secondItem="oMZ-mY-uas" secondAttribute="trailing" constant="288" id="4Pm-AX-IiF"/>
-                            <constraint firstItem="1tc-jB-hzh" firstAttribute="top" secondItem="oMZ-mY-uas" secondAttribute="bottom" constant="25" id="5Uz-Oo-eoW"/>
+                            <constraint firstItem="SOi-Hc-DWQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="1xa-hb-8jG"/>
                             <constraint firstItem="1tc-jB-hzh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="70s-R7-Cib"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Yyy-2Z-yuz" secondAttribute="trailing" constant="20" id="8aj-Qs-HCh"/>
-                            <constraint firstItem="1tc-jB-hzh" firstAttribute="top" secondItem="0nv-s7-bJr" secondAttribute="bottom" constant="25" id="8xG-c5-7a2"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0nv-s7-bJr" secondAttribute="trailing" constant="35" id="Bjm-Vf-GvO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1tc-jB-hzh" secondAttribute="bottom" id="JA6-ze-Vx8"/>
-                            <constraint firstItem="efL-x6-97s" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="M34-91-0nP"/>
                             <constraint firstItem="Yyy-2Z-yuz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="RRU-OO-1z1"/>
-                            <constraint firstItem="oMZ-mY-uas" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="SJ5-Iy-AT2"/>
                             <constraint firstItem="1tc-jB-hzh" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.65" id="TdJ-Zj-I0n"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1tc-jB-hzh" secondAttribute="trailing" constant="20" id="Vom-jI-Eh1"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="efL-x6-97s" secondAttribute="trailing" id="egq-df-682"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="efL-x6-97s" secondAttribute="bottom" id="fbl-Sf-zcR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SOi-Hc-DWQ" secondAttribute="trailing" constant="20" id="aw6-Uz-e6T"/>
                             <constraint firstItem="Yyy-2Z-yuz" firstAttribute="top" secondItem="L0O-0r-9P8" secondAttribute="bottom" constant="43.5" id="r5B-rd-kEx"/>
                             <constraint firstItem="L0O-0r-9P8" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="rer-0w-vtr"/>
                             <constraint firstItem="L0O-0r-9P8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="w6L-Ea-pq6"/>
-                            <constraint firstItem="efL-x6-97s" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yGv-Fa-qd2"/>
+                            <constraint firstItem="1tc-jB-hzh" firstAttribute="top" secondItem="SOi-Hc-DWQ" secondAttribute="bottom" id="wrd-dq-U3n"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6zs-Ka-nG3"/>
                     <connections>
-                        <outlet property="meteoriteImageView" destination="efL-x6-97s" id="3DG-k9-QMu"/>
+                        <outlet property="nameAndMassBackground" destination="SOi-Hc-DWQ" id="gVR-Ip-XVT"/>
                         <outlet property="tableView" destination="1tc-jB-hzh" id="oLh-Tl-QDi"/>
                         <segue destination="mUC-Z2-tRF" kind="show" identifier="mapSegue" id="TBJ-jT-lbU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="778" y="-208"/>
+            <point key="canvasLocation" x="776.81159420289862" y="-208.25892857142856"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="vnh-KE-CF4">
@@ -185,9 +178,11 @@ For a location of impact, tap any meteorite.</string>
         </scene>
     </scenes>
     <resources>
-        <image name="Meteorite" width="617" height="1100"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

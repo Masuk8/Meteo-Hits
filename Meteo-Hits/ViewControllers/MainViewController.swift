@@ -11,89 +11,97 @@ import CoreLocation
 
 class MainViewController: UIViewController {
 
-  @IBOutlet weak var meteoriteImageView: UIView!
+  @IBOutlet weak var nameAndMassBackground: UIView!
   @IBOutlet weak var tableView: UITableView!
 
+  private let refreshControl = UIRefreshControl()
+
   override func viewWillAppear(_ animated: Bool) {
-    navigationController?.navigationBar.barTintColor = .black
-    checkWithDate()
+    navigationController?.navigationBar.barStyle = .black
+    checkIfUpdateIsNeeded()
     tableViewStartUpSettings()
   }
 
   override func viewDidLoad() {
     super.viewDidLoad()
+
+
+
+    checkIfUpdateIsNeeded()
+    nameAndMassBackground.layer.cornerRadius = 5
     navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
     navigationController?.navigationBar.shadowImage = UIImage()
     navigationController?.navigationBar.isTranslucent = true
-    navigationController?.navigationBar.barStyle = .black
   }
 
-  func tableViewStartUpSettings () {
-
+  private func tableViewStartUpSettings () {
     tableView.delegate = self
     tableView.dataSource = self
     tableView.layer.cornerRadius = 5
     tableView.layer.masksToBounds = true
     tableView.allowsSelection = true
+    tableView.refreshControl = refreshControl
+    refreshControl.addTarget(self, action: #selector(refreshMeteoritesData(_:)), for: .valueChanged)
   }
 
-  func checkWithDate () {
-
-    if let timeCheck = UserDefaultsManager.shared.loadDateCheck() {
-      if timeCheck == Date(timeIntervalSince1970: 0) || Calendar.current.isDateInToday(timeCheck) == false {
-        print("timeCheck is: timeIntervalSince1970: 0")
-        meteoriteImageView.isHidden = false
-        createArrayOfMeteoritesAfter2011()
+  @objc private func refreshMeteoritesData(_ sender: Any) {
+    createArrayOfMeteoritesAfter2011 {
+      DispatchQueue.main.async { [weak self] in
+        self?.refreshControl.endRefreshing()
+        self?.tableView.reloadData()
       }
     }
   }
 
-  func createArrayOfMeteoritesAfter2011 () {
-
-    var finalArray = [MeteoritesData]()
-
-    getJsonFromWeb { (meteoritesData) in
-
-      let yearToCompare = self.calendarDate(date: self.stringToDate(string: "2011-01-01T00:00:00.000"))
-
-      for meteorite in meteoritesData {
-
-        if let unwrappedYear = meteorite.year {
-          let meteoriteYear = self.calendarDate(date: self.stringToDate(string: unwrappedYear))
-
-          if meteoriteYear >= yearToCompare {
-            finalArray.append(meteorite)
-          }
+  private func checkIfUpdateIsNeeded () {
+    guard let timeCheck = UserDefaultsManager.shared.loadDateCheck() else {return}
+    if timeCheck == Date(timeIntervalSince1970: 0) ||
+        Calendar.current.isDateInToday(timeCheck) == false {
+      print("timeCheck is: timeIntervalSince1970: 0")
+      refreshControl.beginRefreshingManually()
+      createArrayOfMeteoritesAfter2011 {
+        DispatchQueue.main.async {[weak self] in
+          self?.tableView.reloadData()
         }
       }
-      UserDefaultsManager.shared.saveMeteorites(array: finalArray)
-      UserDefaultsManager.shared.saveDateCheck(dateCheck: Date())
-      DispatchQueue.main.async {
-        self.tableView.reloadData()
-      }
     }
   }
 
-  func stringToDate(string: String) -> Date {
-    let dateFormatter = DateFormatter()
-    dateFormatter.locale = .init(identifier: "en_US_POSIX")
-    dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
-    guard let date = dateFormatter.date(from: string) else { fatalError() }
-    return date
+  private func createArrayOfMeteoritesAfter2011(completion: @escaping () -> Void) {
+    getJsonFromWeb {[weak self] (meteoritesData) in
+
+      guard let yearToCompare = "2011-01-01T00:00:00.000".date else { return }
+
+      let filteredMeteorites = meteoritesData.filter { meteorite -> Bool in
+        guard let date = meteorite.date else { return false }
+        let isAfter2011 = date > yearToCompare
+        return isAfter2011
+      }
+
+      guard let sortedMeteorites = self?.sortMeteorites(meteoritesData: filteredMeteorites) else { return }
+
+      UserDefaultsManager.shared.saveMeteorites(array: sortedMeteorites)
+      UserDefaultsManager.shared.saveDateCheck(dateCheck: Date())
+
+      completion()
+    }
   }
 
-  func calendarDate (date: Date) -> Int {
+  private func sortMeteorites(meteoritesData: [MeteoritesData]) -> [MeteoritesData] {
+    return meteoritesData.sorted().reversed()
+  }
+
+  private func calendarDate (date: Date) -> Int {
     let calendar = Calendar.current
     let components = calendar.dateComponents([.year, .month, .day, .hour], from: date)
     guard let finalYear = components.year else { fatalError() }
     return finalYear
   }
 
-  func getJsonFromWeb(completion: @escaping ([MeteoritesData]) -> Void) {
-
+  private func getJsonFromWeb(completion: @escaping ([MeteoritesData]) -> Void) {
     let token = "M1oRBVUlnNWYmVr8z2R7xGu7V"
-    if let url = URL(string: "https://data.nasa.gov/resource/y77d-th95.json?$$app_token=\(token)") {
-
+    if let url = URL(string: "https://data.nasa.gov/resource/y77d-th95.json?$$app_token=\(token)&$where=date_extract_y(year)%3e=2010") {
+      print(url)
       let request = URLRequest(url: url)
       URLSession.shared.dataTask(with: request) { (data, _, error) in
         if let error = error {
@@ -144,24 +152,28 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "MeteoCell", for: indexPath) as! MeteoTableViewCell
+    guard let cell = tableView.dequeueReusableCell(
+            withIdentifier: "MeteoCell",
+            for: indexPath) as? MeteoTableViewCell else {
+      return UITableViewCell()
+    }
+
     let data = UserDefaultsManager.shared.loadMeteorites()
     cell.tableViewCellName.sizeToFit()
     cell.tableViewCellName.text = data[indexPath.row].name
     cell.tableViewCellMass.sizeToFit()
     cell.tableViewCellMass.text = data[indexPath.row].mass
-    meteoriteImageView.isHidden = true
     return cell
   }
 
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
     let data = UserDefaultsManager.shared.loadMeteorites
-    let location = data()[indexPath.row].geolocation?.coordinates
+    guard let location = data()[indexPath.row].geolocation?.coordinates else { return }
     let destinationVC = MapViewController()
-    destinationVC.location = location!
+    destinationVC.location = location
 
-    self.performSegue(withIdentifier: "mapSegue", sender: location)
+    performSegue(withIdentifier: "mapSegue", sender: location)
 
   }
 
@@ -173,3 +185,13 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     return .none
   }
 }
+
+extension UIRefreshControl {
+  func beginRefreshingManually() {
+    if let scrollView = superview as? UIScrollView {
+      scrollView.setContentOffset(CGPoint(x: 0, y: scrollView.contentOffset.y - frame.height), animated: true)
+    }
+    beginRefreshing()
+  }
+}
+
