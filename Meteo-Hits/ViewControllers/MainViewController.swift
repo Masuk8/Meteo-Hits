@@ -13,23 +13,22 @@ class MainViewController: UIViewController {
   
   @IBOutlet weak var tableView: UITableView!
   
-  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    if let yourVC = segue.destination as? MapViewController {
-      yourVC.location = (sender as? [Double] ?? [0, 0])
-    }
+  override func viewWillAppear(_ animated: Bool) {
+    navigationController?.navigationBar.barTintColor = .black
+    checkWithDate()
+    tableViewStartUpSettings()
   }
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
-    checkWithDate()
-    tableViewStartUpSettings()
   }
   
   func tableViewStartUpSettings () {
     
     tableView.delegate = self
     tableView.dataSource = self
+    tableView.layer.cornerRadius = 5
+    tableView.layer.masksToBounds = true
     tableView.allowsSelection = true
   }
   
@@ -59,7 +58,7 @@ class MainViewController: UIViewController {
         if let unwrappedYear = meteorite.year {
           let meteoriteYear = self.calendarDate(date: self.stringToDate(string: unwrappedYear))
           
-          if meteoriteYear > yearToCompare {
+          if meteoriteYear >= yearToCompare {
             finalArray.append(meteorite)
           }
         }
@@ -124,6 +123,12 @@ class MainViewController: UIViewController {
       }.resume()
     }
   }
+
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if let yourVC = segue.destination as? MapViewController {
+      yourVC.location = (sender as? [Double] ?? [0, 0])
+    }
+  }
 }
 
 extension MainViewController: UITableViewDataSource, UITableViewDelegate {
@@ -140,7 +145,9 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     let cell = tableView.dequeueReusableCell(withIdentifier: "MeteoCell", for: indexPath) as! MeteoTableViewCell
     
     UserDefaultsManager.shared.loadMeteorites { (data) in
+      cell.tableViewCellName.sizeToFit()
       cell.tableViewCellName.text = data[indexPath.row].name
+      cell.tableViewCellMass.sizeToFit()
       cell.tableViewCellMass.text = data[indexPath.row].mass
     }
     

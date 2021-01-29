@@ -29,20 +29,18 @@ class MapViewController: UIViewController {
     
   }
   func placePin() {
-    let lat = location[1]
-    let lon = location[0]
     let annotation = MKPointAnnotation()
-    let centerCoordinate = CLLocationCoordinate2DMake(lat, lon)
+    let centerCoordinate = CLLocationCoordinate2DMake(location[1], location[0])
+
     annotation.coordinate = centerCoordinate
     mapView.addAnnotation(annotation)
     centerMapOnLocation()
   }
   
   func centerMapOnLocation() {
-    let lat = location[1]
-    let lon = location[0]
-    let coordinate = CLLocationCoordinate2DMake(lat, lon)
-    mapView.centerCoordinate = coordinate
+
+    let centerCoordinate = CLLocationCoordinate2DMake(location[1], location[0])
+    mapView.centerCoordinate = centerCoordinate
     }
 }
 

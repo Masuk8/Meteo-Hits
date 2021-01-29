@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		FA414F5225C07EEB00DFEA16 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA414F5125C07EEB00DFEA16 /* UserDefaultsManager.swift */; };
+		FA4202DD25C40FC50065F9B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA4E18BC25BF0C4700471583 /* Main.storyboard */; };
 		FA44126525C21A3200C703B2 /* swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = FA44126425C21A3200C703B2 /* swiftlint.yml */; };
 		FA44126825C21AA000C703B2 /* MeteoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA44126725C21AA000C703B2 /* MeteoTableViewCell.swift */; };
 		FA4E18B725BF0C4700471583 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4E18B625BF0C4700471583 /* AppDelegate.swift */; };
 		FA4E18B925BF0C4700471583 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4E18B825BF0C4700471583 /* SceneDelegate.swift */; };
 		FA4E18BB25BF0C4700471583 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4E18BA25BF0C4700471583 /* MainViewController.swift */; };
-		FA4E18BE25BF0C4700471583 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA4E18BC25BF0C4700471583 /* Main.storyboard */; };
 		FA4E18C025BF0C4B00471583 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA4E18BF25BF0C4B00471583 /* Assets.xcassets */; };
 		FA4E18C325BF0C4B00471583 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA4E18C125BF0C4B00471583 /* LaunchScreen.storyboard */; };
 		FA4E18CC25BF18C200471583 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4E18CB25BF18C200471583 /* MapViewController.swift */; };
@@ -167,7 +167,7 @@
 				FA4E18C325BF0C4B00471583 /* LaunchScreen.storyboard in Resources */,
 				FA44126525C21A3200C703B2 /* swiftlint.yml in Resources */,
 				FA4E18C025BF0C4B00471583 /* Assets.xcassets in Resources */,
-				FA4E18BE25BF0C4700471583 /* Main.storyboard in Resources */,
+				FA4202DD25C40FC50065F9B9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,7 +351,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4ZJ3P2HB2M;
 				INFOPLIST_FILE = "Meteo-Hits/Info.plist";
@@ -370,7 +370,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4ZJ3P2HB2M;
 				INFOPLIST_FILE = "Meteo-Hits/Info.plist";
