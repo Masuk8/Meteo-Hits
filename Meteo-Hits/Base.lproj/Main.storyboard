@@ -85,6 +85,21 @@ For a location of impact, tap any meteorite.</string>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="efL-x6-97s">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Meteorite" translatesAutoresizingMaskIntoConstraints="NO" id="Gyv-4u-bpp">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Gyv-4u-bpp" secondAttribute="bottom" id="NWa-dt-Vzn"/>
+                                    <constraint firstAttribute="trailing" secondItem="Gyv-4u-bpp" secondAttribute="trailing" id="r2D-Ry-OM9"/>
+                                    <constraint firstItem="Gyv-4u-bpp" firstAttribute="top" secondItem="efL-x6-97s" secondAttribute="top" id="sZW-hN-cyv"/>
+                                    <constraint firstItem="Gyv-4u-bpp" firstAttribute="leading" secondItem="efL-x6-97s" secondAttribute="leading" id="y7A-FD-r0B"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -96,17 +111,22 @@ For a location of impact, tap any meteorite.</string>
                             <constraint firstItem="1tc-jB-hzh" firstAttribute="top" secondItem="0nv-s7-bJr" secondAttribute="bottom" constant="25" id="8xG-c5-7a2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0nv-s7-bJr" secondAttribute="trailing" constant="35" id="Bjm-Vf-GvO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1tc-jB-hzh" secondAttribute="bottom" id="JA6-ze-Vx8"/>
+                            <constraint firstItem="efL-x6-97s" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="M34-91-0nP"/>
                             <constraint firstItem="Yyy-2Z-yuz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="RRU-OO-1z1"/>
                             <constraint firstItem="oMZ-mY-uas" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="SJ5-Iy-AT2"/>
                             <constraint firstItem="1tc-jB-hzh" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.65" id="TdJ-Zj-I0n"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1tc-jB-hzh" secondAttribute="trailing" constant="20" id="Vom-jI-Eh1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="efL-x6-97s" secondAttribute="trailing" id="egq-df-682"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="efL-x6-97s" secondAttribute="bottom" id="fbl-Sf-zcR"/>
                             <constraint firstItem="Yyy-2Z-yuz" firstAttribute="top" secondItem="L0O-0r-9P8" secondAttribute="bottom" constant="43.5" id="r5B-rd-kEx"/>
                             <constraint firstItem="L0O-0r-9P8" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="rer-0w-vtr"/>
                             <constraint firstItem="L0O-0r-9P8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="w6L-Ea-pq6"/>
+                            <constraint firstItem="efL-x6-97s" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yGv-Fa-qd2"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6zs-Ka-nG3"/>
                     <connections>
+                        <outlet property="meteoriteImageView" destination="efL-x6-97s" id="3DG-k9-QMu"/>
                         <outlet property="tableView" destination="1tc-jB-hzh" id="oLh-Tl-QDi"/>
                         <segue destination="mUC-Z2-tRF" kind="show" identifier="mapSegue" id="TBJ-jT-lbU"/>
                     </connections>
@@ -166,6 +186,7 @@ For a location of impact, tap any meteorite.</string>
         </scene>
     </scenes>
     <resources>
+        <image name="Meteorite" width="617" height="1100"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
