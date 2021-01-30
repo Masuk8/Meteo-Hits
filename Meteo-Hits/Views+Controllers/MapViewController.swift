@@ -25,6 +25,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     self.navigationController?.setNavigationBarHidden(false, animated: animated)
     navigationController?.isNavigationBarHidden = false
     navigationController?.navigationBar.barStyle = .default
+
   }
 
   override func viewWillDisappear(_ animated: Bool) {
@@ -34,7 +35,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
   override func viewDidLoad() {
     super.viewDidLoad()
     mapView.delegate = self
-    nameLbl.text = "Name: \(MapViewController.recievedName)"
+    nameLbl.text = "Meteorite name: \(MapViewController.recievedName)"
     yearLbl.text = "Impact year: \(MapViewController.recievedYear)"
     massLbl.text = "Mass: \(MapViewController.recievedMass) grams"
     placeCustomPin()

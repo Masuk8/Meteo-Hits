@@ -18,7 +18,12 @@ class MainViewController: UIViewController {
   private let refreshControl = UIRefreshControl()
   private var yearSections: [[Int]] = []
 
+  override var preferredStatusBarStyle: UIStatusBarStyle {
+    .lightContent
+  }
+
   override func viewWillAppear(_ animated: Bool) {
+    setNeedsStatusBarAppearanceUpdate()
 
     checkIfUpdateIsNeeded()
     tableViewStartUpSettings()
@@ -29,13 +34,13 @@ class MainViewController: UIViewController {
     super.viewDidLoad()
     indicatorView.isHidden = true
     checkIfUpdateIsNeeded()
-    nameAndMassBackground.roundCorners(corners: [.topRight, .topLeft], radius: 5.0)
+    nameAndMassBackground.roundCorners(corners: [.topLeft, .topRight], radius: 5)
   }
 
   private func tableViewStartUpSettings () {
     tableView.delegate = self
     tableView.dataSource = self
-    tableView.roundCorners(corners: [.bottomLeft, .bottomRight], radius: 5.0)
+    tableView.roundCorners(corners: [.bottomLeft, .bottomRight], radius: 5)
     tableView.layer.masksToBounds = true
     tableView.allowsSelection = true
     tableView.refreshControl = refreshControl

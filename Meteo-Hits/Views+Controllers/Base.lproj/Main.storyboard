@@ -20,13 +20,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meteo-Hits" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L0O-0r-9P8">
-                                <rect key="frame" x="127.5" y="88" width="159.5" height="36"/>
+                                <rect key="frame" x="127.5" y="88" width="159.5" height="37"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" red="0.70327227043383056" green="0.33465485886673824" blue="0.085751420806171708" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="1" green="0.1528699782314521" blue="0.23318043634965968" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SOi-Hc-DWQ" userLabel="Name and Mass background View">
-                                <rect key="frame" x="20" y="288.5" width="374" height="50"/>
+                                <rect key="frame" x="20" y="289.5" width="374" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Mass(in grams)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0nv-s7-bJr">
                                         <rect key="frame" x="199" y="12" width="160" height="26.5"/>
@@ -52,7 +53,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yyy-2Z-yuz">
-                                <rect key="frame" x="20" y="167.5" width="374" height="41"/>
+                                <rect key="frame" x="20" y="168.5" width="374" height="41"/>
                                 <string key="text">Here is a list of meteorites since 01.01.2011.
 For a location of impact, tap any meteorite.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -60,7 +61,7 @@ For a location of impact, tap any meteorite.</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1tc-jB-hzh">
-                                <rect key="frame" x="20" y="338.5" width="374" height="503"/>
+                                <rect key="frame" x="20" y="339.5" width="374" height="503"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -111,7 +112,7 @@ For a location of impact, tap any meteorite.</string>
                                 </prototypes>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zF5-5P-p4d" userLabel="Indicator View">
-                                <rect key="frame" x="20" y="338.5" width="374" height="503"/>
+                                <rect key="frame" x="20" y="339.5" width="374" height="503"/>
                                 <subviews>
                                     <activityIndicatorView opaque="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="DAz-iW-cp3">
                                         <rect key="frame" x="168.5" y="233" width="37" height="37"/>
@@ -176,20 +177,20 @@ For a location of impact, tap any meteorite.</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vGE-5K-gOD" userLabel="Info View">
                                 <rect key="frame" x="0.0" y="88" width="414" height="80"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WOM-s5-ksC" userLabel="Name Lbl">
-                                        <rect key="frame" x="20" y="10" width="43" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="WOM-s5-ksC" userLabel="Name Lbl">
+                                        <rect key="frame" x="25" y="10" width="364" height="28"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4h8-6O-V7D">
-                                        <rect key="frame" x="20" y="49" width="33" height="21"/>
+                                        <rect key="frame" x="25" y="48" width="33" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mass" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vnh-6q-RZl">
-                                        <rect key="frame" x="353" y="10" width="41" height="21"/>
+                                        <rect key="frame" x="348" y="48" width="41" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -197,15 +198,16 @@ For a location of impact, tap any meteorite.</string>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="Vnh-6q-RZl" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="WOM-s5-ksC" secondAttribute="trailing" constant="8" symbolic="YES" id="6Ws-to-SNt"/>
-                                    <constraint firstAttribute="trailing" secondItem="Vnh-6q-RZl" secondAttribute="trailing" constant="20" id="Cue-pG-uab"/>
-                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="4h8-6O-V7D" secondAttribute="trailing" constant="20" symbolic="YES" id="IYa-m1-Bgb"/>
+                                    <constraint firstItem="WOM-s5-ksC" firstAttribute="top" secondItem="vGE-5K-gOD" secondAttribute="top" constant="10" id="Bic-Se-sNG"/>
+                                    <constraint firstAttribute="bottom" secondItem="Vnh-6q-RZl" secondAttribute="bottom" constant="11" id="DWR-iR-z5D"/>
                                     <constraint firstAttribute="height" constant="80" id="WKH-Pu-ezH"/>
-                                    <constraint firstItem="Vnh-6q-RZl" firstAttribute="top" secondItem="vGE-5K-gOD" secondAttribute="top" constant="10" id="doO-R8-wY5"/>
-                                    <constraint firstItem="WOM-s5-ksC" firstAttribute="top" secondItem="vGE-5K-gOD" secondAttribute="top" constant="10" id="rHd-nT-1vt"/>
-                                    <constraint firstAttribute="bottom" secondItem="4h8-6O-V7D" secondAttribute="bottom" constant="10" id="xPb-KP-Vc3"/>
-                                    <constraint firstItem="WOM-s5-ksC" firstAttribute="leading" secondItem="vGE-5K-gOD" secondAttribute="leading" constant="20" id="xkI-B9-L7S"/>
-                                    <constraint firstItem="4h8-6O-V7D" firstAttribute="leading" secondItem="vGE-5K-gOD" secondAttribute="leading" constant="20" id="z6T-o7-GeY"/>
+                                    <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="WOM-s5-ksC" secondAttribute="trailing" constant="25" id="bUO-q3-7E8"/>
+                                    <constraint firstAttribute="bottom" secondItem="4h8-6O-V7D" secondAttribute="bottom" constant="11" id="dOc-lf-99R"/>
+                                    <constraint firstItem="Vnh-6q-RZl" firstAttribute="leading" relation="lessThanOrEqual" secondItem="4h8-6O-V7D" secondAttribute="trailing" constant="290" id="gs6-Id-PJP"/>
+                                    <constraint firstItem="4h8-6O-V7D" firstAttribute="leading" secondItem="vGE-5K-gOD" secondAttribute="leading" constant="25" id="k9C-fY-Gv9"/>
+                                    <constraint firstItem="WOM-s5-ksC" firstAttribute="leading" secondItem="vGE-5K-gOD" secondAttribute="leading" constant="25" id="svw-TW-PsU"/>
+                                    <constraint firstAttribute="trailing" secondItem="Vnh-6q-RZl" secondAttribute="trailing" constant="25" id="wha-jx-IYw"/>
+                                    <constraint firstAttribute="bottom" secondItem="WOM-s5-ksC" secondAttribute="bottom" constant="42" id="x0Q-7P-fdZ"/>
                                 </constraints>
                             </view>
                         </subviews>
