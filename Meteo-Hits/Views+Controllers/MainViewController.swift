@@ -13,30 +13,29 @@ class MainViewController: UIViewController {
 
   @IBOutlet weak var nameAndMassBackground: UIView!
   @IBOutlet weak var tableView: UITableView!
-
+  @IBOutlet weak var indicatorView: UIView!
+  
   private let refreshControl = UIRefreshControl()
   private var yearSections: [[Int]] = []
 
   override func viewWillAppear(_ animated: Bool) {
-    navigationController?.navigationBar.barStyle = .black
+
     checkIfUpdateIsNeeded()
     tableViewStartUpSettings()
+    navigationController?.isNavigationBarHidden = true
   }
 
   override func viewDidLoad() {
     super.viewDidLoad()
-
+    indicatorView.isHidden = true
     checkIfUpdateIsNeeded()
-    nameAndMassBackground.layer.cornerRadius = 5
-    navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-    navigationController?.navigationBar.shadowImage = UIImage()
-    navigationController?.navigationBar.isTranslucent = true
+    nameAndMassBackground.roundCorners(corners: [.topRight, .topLeft], radius: 5.0)
   }
 
   private func tableViewStartUpSettings () {
     tableView.delegate = self
     tableView.dataSource = self
-    tableView.layer.cornerRadius = 5
+    tableView.roundCorners(corners: [.bottomLeft, .bottomRight], radius: 5.0)
     tableView.layer.masksToBounds = true
     tableView.allowsSelection = true
     tableView.refreshControl = refreshControl
@@ -58,7 +57,7 @@ class MainViewController: UIViewController {
         Calendar.current.isDateInToday(timeCheck) == false {
       print("timeCheck is: timeIntervalSince1970: 0")
       refreshControl.layoutIfNeeded()
-      refreshControl.beginRefreshingManually()
+      indicatorView.isHidden = false
       createArrayOfMeteoritesAfter2011 {
         DispatchQueue.main.async {[weak self] in
           self?.tableView.reloadData()
@@ -71,7 +70,6 @@ class MainViewController: UIViewController {
     getJsonFromWeb {[weak self] (meteoritesData) in
 
       guard let yearToCompare = "2011-01-01T00:00:00.000".date else { return }
-
       let filteredMeteorites = meteoritesData.filter { meteorite -> Bool in
         guard let date = meteorite.date else { return false }
         let isAfter2011 = date > yearToCompare
@@ -79,11 +77,11 @@ class MainViewController: UIViewController {
       }
 
       guard let sortedMeteorites = self?.sortMeteorites(meteoritesData: filteredMeteorites) else { return }
-
-
+      DispatchQueue.main.async {
+      self?.indicatorView.isHidden = true
+      }
       UserDefaultsManager.shared.saveMeteorites(array: sortedMeteorites)
       UserDefaultsManager.shared.saveDateCheck(dateCheck: Date())
-
       completion()
     }
   }
@@ -179,15 +177,6 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
 
   func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
     return .none
-  }
-}
-
-extension UIRefreshControl {
-  func beginRefreshingManually() {
-    if let scrollView = superview as? UIScrollView {
-      scrollView.setContentOffset(CGPoint(x: 0, y: scrollView.contentOffset.y - frame.height), animated: true)
-    }
-    beginRefreshing()
   }
 }
 
