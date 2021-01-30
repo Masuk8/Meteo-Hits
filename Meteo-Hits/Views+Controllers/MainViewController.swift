@@ -15,6 +15,7 @@ class MainViewController: UIViewController {
   @IBOutlet weak var tableView: UITableView!
 
   private let refreshControl = UIRefreshControl()
+  private var yearSections: [[Int]] = []
 
   override func viewWillAppear(_ animated: Bool) {
     navigationController?.navigationBar.barStyle = .black
@@ -24,8 +25,6 @@ class MainViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-
-
 
     checkIfUpdateIsNeeded()
     nameAndMassBackground.layer.cornerRadius = 5
@@ -58,6 +57,7 @@ class MainViewController: UIViewController {
     if timeCheck == Date(timeIntervalSince1970: 0) ||
         Calendar.current.isDateInToday(timeCheck) == false {
       print("timeCheck is: timeIntervalSince1970: 0")
+      refreshControl.layoutIfNeeded()
       refreshControl.beginRefreshingManually()
       createArrayOfMeteoritesAfter2011 {
         DispatchQueue.main.async {[weak self] in
@@ -79,6 +79,7 @@ class MainViewController: UIViewController {
       }
 
       guard let sortedMeteorites = self?.sortMeteorites(meteoritesData: filteredMeteorites) else { return }
+
 
       UserDefaultsManager.shared.saveMeteorites(array: sortedMeteorites)
       UserDefaultsManager.shared.saveDateCheck(dateCheck: Date())
@@ -134,13 +135,8 @@ class MainViewController: UIViewController {
       }.resume()
     }
   }
-
-  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    if let yourVC = segue.destination as? MapViewController {
-      yourVC.location = (sender as? [Double] ?? [0, 0])
-    }
   }
-}
+
 
 extension MainViewController: UITableViewDataSource, UITableViewDelegate {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -163,23 +159,23 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     cell.tableViewCellName.text = data[indexPath.row].name
     cell.tableViewCellMass.sizeToFit()
     cell.tableViewCellMass.text = data[indexPath.row].mass
+
     return cell
   }
 
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
-    let data = UserDefaultsManager.shared.loadMeteorites
-    guard let location = data()[indexPath.row].geolocation?.coordinates else { return }
-    let destinationVC = MapViewController()
-    destinationVC.location = location
-
-    performSegue(withIdentifier: "mapSegue", sender: location)
-
+    let data = UserDefaultsManager.shared.loadMeteorites()
+    guard let location = data[indexPath.row].geolocation?.coordinates else { return }
+    guard let theYear = data[indexPath.row].year else { return }
+    MapViewController.recievedLocation = location
+    MapViewController.recievedName = data[indexPath.row].name
+    MapViewController.recievedYear = Int(theYear.date?.get(.year) ?? 0)
+    MapViewController.recievedMass = data[indexPath.row].mass ?? ""
+    performSegue(withIdentifier: "mapSegue", sender: nil)
   }
 
-  func tableView(_ tableView: UITableView, shouldIndentWhileEditingRowAt indexPath: IndexPath) -> Bool {
-    return false
-  }
+
 
   func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
     return .none

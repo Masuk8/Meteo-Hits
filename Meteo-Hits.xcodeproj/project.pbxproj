@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA3D859725C4F7C0009C2E16 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3D859625C4F7C0009C2E16 /* Extensions.swift */; };
 		FA3F13B125C47712007D2A40 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3F13B025C47712007D2A40 /* Date+Extension.swift */; };
 		FA414F5225C07EEB00DFEA16 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA414F5125C07EEB00DFEA16 /* UserDefaultsManager.swift */; };
 		FA4202DD25C40FC50065F9B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA4E18BC25BF0C4700471583 /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA3D859625C4F7C0009C2E16 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		FA3F13B025C47712007D2A40 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		FA414F5125C07EEB00DFEA16 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		FA44126425C21A3200C703B2 /* swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftlint.yml; sourceTree = SOURCE_ROOT; };
@@ -49,10 +51,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA3D858F25C4B8FC009C2E16 /* Views+Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FA4E18BC25BF0C4700471583 /* Main.storyboard */,
+				FA4E18BA25BF0C4700471583 /* MainViewController.swift */,
+				FA4E18CB25BF18C200471583 /* MapViewController.swift */,
+				FA44126725C21AA000C703B2 /* MeteoTableViewCell.swift */,
+			);
+			path = "Views+Controllers";
+			sourceTree = "<group>";
+		};
 		FA3F13AF25C476F0007D2A40 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				FA3F13B025C47712007D2A40 /* Date+Extension.swift */,
+				FA3D859625C4F7C0009C2E16 /* Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -63,16 +77,6 @@
 				FA4E18D025BF221300471583 /* MeteoritesData.swift */,
 			);
 			path = Structures;
-			sourceTree = "<group>";
-		};
-		FA414F5025C07E8E00DFEA16 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				FA4E18BA25BF0C4700471583 /* MainViewController.swift */,
-				FA44126725C21AA000C703B2 /* MeteoTableViewCell.swift */,
-				FA4E18CB25BF18C200471583 /* MapViewController.swift */,
-			);
-			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		FA414F5425C07EF300DFEA16 /* Shared */ = {
@@ -102,16 +106,15 @@
 		FA4E18B525BF0C4700471583 /* Meteo-Hits */ = {
 			isa = PBXGroup;
 			children = (
+				FA3D858F25C4B8FC009C2E16 /* Views+Controllers */,
 				FA414F5425C07EF300DFEA16 /* Shared */,
-				FA414F5025C07E8E00DFEA16 /* ViewControllers */,
 				FA414F4E25C071D500DFEA16 /* Structures */,
 				FA3F13AF25C476F0007D2A40 /* Extensions */,
 				FA4E18B625BF0C4700471583 /* AppDelegate.swift */,
 				FA44126425C21A3200C703B2 /* swiftlint.yml */,
 				FA4E18B825BF0C4700471583 /* SceneDelegate.swift */,
-				FA4E18BC25BF0C4700471583 /* Main.storyboard */,
-				FA4E18BF25BF0C4B00471583 /* Assets.xcassets */,
 				FA4E18C125BF0C4B00471583 /* LaunchScreen.storyboard */,
+				FA4E18BF25BF0C4B00471583 /* Assets.xcassets */,
 				FA4E18C425BF0C4B00471583 /* Info.plist */,
 			);
 			path = "Meteo-Hits";
@@ -214,6 +217,7 @@
 				FA4E18B725BF0C4700471583 /* AppDelegate.swift in Sources */,
 				FA414F5225C07EEB00DFEA16 /* UserDefaultsManager.swift in Sources */,
 				FA4E18B925BF0C4700471583 /* SceneDelegate.swift in Sources */,
+				FA3D859725C4F7C0009C2E16 /* Extensions.swift in Sources */,
 				FA4E18D125BF221300471583 /* MeteoritesData.swift in Sources */,
 				FA3F13B125C47712007D2A40 /* Date+Extension.swift in Sources */,
 				FA44126825C21AA000C703B2 /* MeteoTableViewCell.swift in Sources */,
