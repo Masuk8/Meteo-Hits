@@ -12,7 +12,7 @@ class MeteoritePin: NSObject, MKAnnotation {
   let coordinate: CLLocationCoordinate2D
   let title: String?
   let subtitle: String?
-  var image: UIImage? = nil
+  var image: UIImage?
 
   init(title: String, subtitle: String, coordinate: CLLocationCoordinate2D) {
 

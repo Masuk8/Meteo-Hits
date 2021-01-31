@@ -25,7 +25,6 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     self.navigationController?.setNavigationBarHidden(false, animated: animated)
     navigationController?.isNavigationBarHidden = false
     navigationController?.navigationBar.barStyle = .default
-
   }
 
   override func viewWillDisappear(_ animated: Bool) {
@@ -47,7 +46,6 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     let year = MapViewController.recievedYear
     let coordinates = CLLocationCoordinate2DMake(location[1], location[0])
     let pin = MeteoritePin(title: "\(name)", subtitle: "\(year)", coordinate: coordinates)
-
     self.mapView.addAnnotation(pin)
     centerMapOnLocation(location: location)
   }

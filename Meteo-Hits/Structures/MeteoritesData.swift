@@ -33,4 +33,3 @@ extension MeteoritesData: Comparable {
     return lhsMass == rhsMass
   }
 }
-

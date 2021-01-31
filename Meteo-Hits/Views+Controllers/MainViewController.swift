@@ -14,17 +14,13 @@ class MainViewController: UIViewController {
   @IBOutlet weak var nameAndMassBackground: UIView!
   @IBOutlet weak var tableView: UITableView!
   @IBOutlet weak var indicatorView: UIView!
-  
-  private let refreshControl = UIRefreshControl()
-  private var yearSections: [[Int]] = []
 
-  override var preferredStatusBarStyle: UIStatusBarStyle {
-    .lightContent
-  }
+  private let refreshControl = UIRefreshControl()
+
+  override var preferredStatusBarStyle: UIStatusBarStyle { .lightContent }
 
   override func viewWillAppear(_ animated: Bool) {
     setNeedsStatusBarAppearanceUpdate()
-
     checkIfUpdateIsNeeded()
     tableViewStartUpSettings()
     navigationController?.isNavigationBarHidden = true
@@ -72,18 +68,17 @@ class MainViewController: UIViewController {
   }
 
   private func createArrayOfMeteoritesAfter2011(completion: @escaping () -> Void) {
-    getJsonFromWeb {[weak self] (meteoritesData) in
 
+    getJsonFromWeb {[weak self] (meteoritesData) in
       guard let yearToCompare = "2011-01-01T00:00:00.000".date else { return }
       let filteredMeteorites = meteoritesData.filter { meteorite -> Bool in
         guard let date = meteorite.date else { return false }
         let isAfter2011 = date > yearToCompare
         return isAfter2011
       }
-
       guard let sortedMeteorites = self?.sortMeteorites(meteoritesData: filteredMeteorites) else { return }
       DispatchQueue.main.async {
-      self?.indicatorView.isHidden = true
+        self?.indicatorView.isHidden = true
       }
       UserDefaultsManager.shared.saveMeteorites(array: sortedMeteorites)
       UserDefaultsManager.shared.saveDateCheck(dateCheck: Date())
@@ -138,15 +133,13 @@ class MainViewController: UIViewController {
       }.resume()
     }
   }
-  }
-
+}
 
 extension MainViewController: UITableViewDataSource, UITableViewDelegate {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     var index = 0
     let data = UserDefaultsManager.shared.loadMeteorites()
     index = data.count
-
     return index
   }
 
@@ -162,12 +155,10 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     cell.tableViewCellName.text = data[indexPath.row].name
     cell.tableViewCellMass.sizeToFit()
     cell.tableViewCellMass.text = data[indexPath.row].mass
-
     return cell
   }
 
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
     let data = UserDefaultsManager.shared.loadMeteorites()
     guard let location = data[indexPath.row].geolocation?.coordinates else { return }
     guard let theYear = data[indexPath.row].year else { return }
@@ -178,10 +169,7 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     performSegue(withIdentifier: "mapSegue", sender: nil)
   }
 
-
-
   func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
     return .none
   }
 }
-
