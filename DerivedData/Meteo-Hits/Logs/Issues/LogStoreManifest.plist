@@ -6,7 +6,7 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
-		<key>832F3C66-C0EB-4E9A-8D20-DC8CE61CB1C6</key>
+		<key>358690D8-8052-4B9C-9EE3-D08E62BA9C8F</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogMajorGroupSection</string>
@@ -15,24 +15,24 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.target.product-type.application</string>
 			<key>fileName</key>
-			<string>832F3C66-C0EB-4E9A-8D20-DC8CE61CB1C6.xcactivitylog</string>
+			<string>358690D8-8052-4B9C-9EE3-D08E62BA9C8F.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
 			<dict>
 				<key>highLevelStatus</key>
-				<string>W</string>
+				<string>S</string>
 			</dict>
 			<key>signature</key>
 			<string>Meteo-Hits-eczjtehlaiyalkflyztimdimykxe</string>
 			<key>timeStartedRecording</key>
-			<real>633787571.17558205</real>
+			<real>633814050.37054896</real>
 			<key>timeStoppedRecording</key>
-			<real>633787573.22118902</real>
+			<real>633814051.51176596</real>
 			<key>title</key>
 			<string>Build target Meteo-Hits</string>
 			<key>uniqueIdentifier</key>
-			<string>832F3C66-C0EB-4E9A-8D20-DC8CE61CB1C6</string>
+			<string>358690D8-8052-4B9C-9EE3-D08E62BA9C8F</string>
 		</dict>
 	</dict>
 	<key>preserveOldLogs</key>
